@@ -1,0 +1,123 @@
+/*NOW WE ADD THE CSS FOR FAQ'S*/
+
+
+.faq {
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2 {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+
+.acc {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.acc li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.acc li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none; /*TO HIDE THE RADIO BUTTONS*/
+}
+
+.acc .content {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0; /*TO HIDE THE ANSWERS OF OUESTIONS*/
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s; /*TIMINGS OF ONE ANSWER TO CLOSE AUTOMATICALLY*/
+}
+
+.acc input[type="radio"]:checked+label+.content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.acc input[type="radio"]:checked+label::after {
+    transform: rotate(135deg); /*TO ROTATE THE '+' SIGN INTO 'X' FORM WHILE OPENING*/
+}
+
+.faq .email{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.faq small{
+    font-size: 20px; /* TO INCREASE THE SIZE OF TEXT*/
+}
+
+/*NOW WE ADD THE CSS FOR FOOTER ELEMENTS*/
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;  /*TO SEE THE BORDER LINE OF FOOTER*/
+    color: #777;  /*TO SEE THE TEXT */
+}
+.footer h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+
+/*NOW WE ADD CSS FOR COLUMNS IN FOOTER*/
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block; /*IT MAKES LINK BELOW EACH OTHER*/
+    text-decoration: none;
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/*TO MAKE LINKS IN ONE LINE*/
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .language-btn{
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.copyrht{
+    font-size: 14px;
+    margin-top:  20px;
+    margin-bottom: 10px;
+}
